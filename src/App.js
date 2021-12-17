@@ -8,14 +8,16 @@ import {
   Link
 } from "react-router-dom";
 
-import { history } from './helpers'
-import { Testpage } from './pages'
+import { history } from './helpers';
+import { Homepage } from './pages';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <BrowserRouter>
+      <Navbar />
       <Routes>
-        <Route path="/" element={<Testpage/>} />
+        <Route path="/" element={<Homepage/>} />
         {/* <Route path="users/*" element={<Users />} /> */}
       </Routes>
     </BrowserRouter>

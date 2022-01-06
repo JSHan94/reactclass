@@ -8,9 +8,9 @@ import {
   Link
 } from "react-router-dom";
 
-import { history } from './helpers';
-import { Homepage } from './pages';
-import Navbar from './components/Navbar';
+import { Homepage,Aboutpage,Signinpage } from 'pages';
+import Navbar from 'components/Navigation/Navbar';
+
 
 function App() {
   return (
@@ -18,6 +18,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Homepage/>} />
+        <Route path="/about" element={<Aboutpage/>}></Route>
+        <Route path="/signin" element={<Signinpage/>}></Route>
         {/* <Route path="users/*" element={<Users />} /> */}
       </Routes>
     </BrowserRouter>

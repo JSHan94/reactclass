@@ -10,6 +10,7 @@ import {
 
 import { Homepage,Aboutpage,Signinpage } from 'pages';
 import Navbar from 'components/Navigation/Navbar';
+import Eventpage from 'pages/Eventpage';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage/>} />
         <Route path="/about" element={<Aboutpage/>}></Route>
+        <Route path="/events" element={<Eventpage/>}></Route>
         <Route path="/signin" element={<Signinpage/>}></Route>
         {/* <Route path="users/*" element={<Users />} /> */}
       </Routes>

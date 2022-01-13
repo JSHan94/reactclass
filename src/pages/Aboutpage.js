@@ -12,7 +12,7 @@ const Aboutpage =()=>{
             if (user) {
                 setUserId(user.uid)
             } else {
-                alert("not login !")
+                // alert("not login !")
             }
           });
     },[]);

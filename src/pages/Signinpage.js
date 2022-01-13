@@ -8,6 +8,8 @@ import {
     GoogleAuthProvider,
     signInWithPopup
 } from "firebase/auth";
+
+
 const Signinpage = () =>{
     const auth = getAuth();
     const [email,setEmail] = useState("")
@@ -48,7 +50,6 @@ const Signinpage = () =>{
 
     const onClickDelete = () =>{
         const user = auth.currentUser;
-
         deleteUser(user).then(() => {
             window.location.reload();
         }).catch((error) => {
@@ -57,7 +58,7 @@ const Signinpage = () =>{
     }
     
     const onClickSignOut = () =>{
-        const auth = getAuth();
+        // const auth = getAuth();
         signOut(auth).then(() => {
             // Sign-out successful.
             window.location.reload();
@@ -65,7 +66,6 @@ const Signinpage = () =>{
             // An error happened.
             alert(error)
           });
-          
     }
     
     const onClickGoogle = () =>{
@@ -110,11 +110,8 @@ const Signinpage = () =>{
                 <button style={{width:100, height:20}} onClick={onClickDelete}>Withdrawal</button>
                 <button style={{width:100, height:20}} onClick={onClickSignOut}>SignOut</button>
                 <button style={{width:100, height:20}} onClick={onClickGoogle}>Google</button>
-            </div>
-                
+            </div>   
         </div>
-
-
     )
 }
 
